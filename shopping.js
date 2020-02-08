@@ -6,12 +6,12 @@ const mongoose = require('mongoose');
 
 //Controllers
 const auth_controller = require('./controllers/auth_controller');
-const note_controller = require('./controllers/note_controller');
+const list_controller = require('./controllers/list_controller');
 
 let app = express();
 
 app.use(body_parser.urlencoded({
-    extended: true
+    extended: true 
 }));
 
 app.use(session({
@@ -46,11 +46,11 @@ app.post('/register', auth_controller.post_register);
 app.post('/logout', auth_controller.post_logout);
 
 
-//Notes
-app.get('/', is_logged_handler, note_controller.get_notes);
-app.post('/delete-note', is_logged_handler, note_controller.post_delete_note);
-app.get('/note/:id', is_logged_handler, note_controller.get_note);
-app.post('/add-note', is_logged_handler, note_controller.post_note);
+//lists
+app.get('/', is_logged_handler, list_controller.get_lists);
+app.post('/delete-list', is_logged_handler, list_controller.post_delete_list);
+app.get('/list/:id', is_logged_handler, list_controller.get_list);
+app.post('/add-list', is_logged_handler, list_controller.post_list);
 
 app.use((req, res, next) => {
     res.status(404);

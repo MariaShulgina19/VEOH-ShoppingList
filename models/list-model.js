@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const note_schema = new Schema({
+const list_schema = new Schema({
     text: {
         type: String,
         required: true
     }
 });
-const note_model = new mongoose.model('note', note_schema);
+const list_model = new mongoose.model('list', list_schema);
 
-module.exports = note_model;
+module.exports = list_model;
