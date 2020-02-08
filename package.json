@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node shopping.js ",
-    "start-dev" : "nodemon shopping.js"
-
+    "start-dev": "nodemon shopping.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,9 @@
   },
   "homepage": "https://github.com/MariaShulgina19/VEOH-ShoppingList#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.8.11"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
