@@ -60,7 +60,8 @@ app.use((req, res, next) => {
 });
 
 //Shutdown server CTRL + C in terminal
-const mongoose_url = 'mongodb+srv://mariaS:<password>@cluster0-ws0n9.mongodb.net/test?retryWrites=true&w=majority';
+const mongoose_url = 'mongodb+srv://mariaS:MCcUDOIaDWDsnL8l@cluster0-ws0n9.mongodb.net/test?retryWrites=true&w=majority';
+//const mongoose_url = 'mongodb+srv://memoappdb:kcggD3xODFWO7xZs@cluster0-i69qr.mongodb.net/test?retryWrites=true&w=majority';
 
 mongoose.connect(mongoose_url, {
     useUnifiedTopology: true,
