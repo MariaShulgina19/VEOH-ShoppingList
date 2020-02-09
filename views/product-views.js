@@ -2,28 +2,30 @@ const products_view = ((data) => {
     let html = `
     <html>
     <body>
-        <h1> Here is list ${data.list_text} for ${data.user_name}! <h1>
-        <br>
-        <form action="/logout" method="POST">
-            <button type="submit">Log out</button>
-        </form>`;
+        <h1> SHOPPING LIST application </h1>
+         <h2> ${data.user_name}, here is list of ${data.list_text} for you! <h2>
+         <br>
+            <form style="display:inline" action="/logout" method="POST">
+                <button type="submit">Log out</button>
+            </form>
+            
+            <form style="display:inline" action="go_back" method="POST">
+                <button type="submit">Back to lists </button>
+            </form>`;
 
 
     data.products.forEach((product) => { //<img src="${product.picture}"  width="100px" heigth="100px" >
         html += `<br>
         <div> 
         <p> 
-        <h2> ${product.text} <br> </h2>
-        <img src="${product.picture}"  width="300px" heigth="300px" >
+            <h2> ${product.text} <br> </h2>
+            <img src="${product.picture}"  width="100px" heigth="100px" >
         
          </p>
         <p>   Amount: ${product.amount} psc.   </p>
         </div>
         `
-        // product.text;
-        // html += `<br>`;
-        // html += product.amount,
-        // html += ` psc.`; //new
+        
          html += `
         <form action="delete-product" method="POST">
         <input type="hidden" name="product_id" value="${product._id}">
@@ -32,14 +34,14 @@ const products_view = ((data) => {
             </form>
             `;
     });
-    //<input type="text" name="list_id_prod" value="${list._id}"> 
-   // <input type="text" name="image_url" value="https://www.theflavor"></input>
+   
     html += `
+        <h2> Add new product:  <h2>
         <form action="add-product" method="POST">
-            <input type="text" name="product">
-            <input type="number" name="product_amount">
+            product name:<input type="text" name="product">
+            amount: <input type="number" name="product_amount">
             
-            <input type="text" name="image_url" value="https://cdn.pixabay.com/photo/2020/02/05/15/19/zoo-4821484_960_720.jpg">
+            image:<input type="text" name="image_url" value="https://cdn.pixabay.com/photo/2020/02/05/15/19/zoo-4821484_960_720.jpg">
             
             <input type="hidden" name="list_id_prod" value="${data.list_id}">  
             <button type="submit">Add product</button>

@@ -34,6 +34,10 @@ const post_delete_list = (req, res, next) => {
         });
     });
 };
+const post_back_to_list = (req, res, next) => {
+   
+    res.redirect('/');
+};
 
 //get list  List text:1
 
@@ -82,3 +86,4 @@ module.exports.get_list = get_list;
 module.exports.post_list = post_list;
 module.exports.post_delete_list = post_delete_list; 
 module.exports.post_check_list = post_check_list;
+module.exports.post_back_to_list=post_back_to_list;

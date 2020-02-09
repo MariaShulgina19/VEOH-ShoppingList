@@ -2,17 +2,21 @@ const lists_view = ((data) => {
     let html = `
     <html>
     <body>
-        <h1> Welcome dear  ${data.user_name}! <h1>
+        <h1> SHOPPING LIST application </h1>
+        <br>
+        <h2> Welcome  ${data.user_name}! <h2>
         <br>
         <form action="/logout" method="POST">
             <button type="submit">Log out</button>
-        </form>`;
+        </form>
+        <h2> All lists: <h2>
+        `;
 
 
     data.lists.forEach((list) => {
         html += ` <div> 
         <p> 
-        <h2> ${list.text} <br> </h2>
+        <h3> ${list.text} <br> </h3>
         
         
         
@@ -31,7 +35,7 @@ const lists_view = ((data) => {
     html += `
         <form action="/add-list" method="POST">
             <input type="text" name="list">
-            <button type="submit">Add list</button>
+            <button type="submit">Add new list</button>
         </form>
     </html>
     </body>

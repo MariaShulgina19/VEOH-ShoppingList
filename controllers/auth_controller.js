@@ -23,7 +23,8 @@ const get_login = (req, res, next) => {
 const post_logout = (req, res, next) => {
     req.session.destroy();
     res.redirect('/login');
-};
+}; 
+
 
 const post_login = (req, res, next) => {
     const user_name = req.body.user_name;
