@@ -50,14 +50,15 @@ app.post('/logout', auth_controller.post_logout);
 //lists
 app.get('/', is_logged_handler, list_controller.get_lists);
 app.post('/delete-list', is_logged_handler, list_controller.post_delete_list);
-app.get('/list/:id', is_logged_handler, list_controller.get_list);
+//app.get('/list/:id', is_logged_handler, list_controller.get_list);
 app.post('/add-list', is_logged_handler, list_controller.post_list);
+app.post('/check-list', is_logged_handler, list_controller.post_check_list);
 
 //products
-app.get('/', is_logged_handler, product_controller.get_products);
-app.post('/delete-product', is_logged_handler, product_controller.post_delete_product);
-app.get('/product/:id', is_logged_handler, product_controller.get_product);
-app.post('/add-product', is_logged_handler, product_controller.post_product);
+app.get('/list/:id', is_logged_handler, product_controller.get_products);
+app.post('/list/delete-product', is_logged_handler, product_controller.post_delete_product);
+//app.get('/product/:id', is_logged_handler, product_controller.get_product);
+app.post('/list/add-product', is_logged_handler, product_controller.post_add_product);
 
 app.use((req, res, next) => {
     res.status(404);

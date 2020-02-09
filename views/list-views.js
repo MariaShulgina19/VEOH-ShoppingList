@@ -10,12 +10,21 @@ const lists_view = ((data) => {
 
 
     data.lists.forEach((list) => {
-        html += list.text;
-        html += `
-            <form action="delete-list" method="POST">
-                <input type="hidden" name="list_id" value="${list._id}">
-                <button type="submit">Delete list</button>
-            </form>
+        html += ` <div> 
+        <p> 
+        <h2> ${list.text} <br> </h2>
+        
+        
+        
+        <form style="display:inline" action="check-list" method="POST">
+            <input type="hidden" name="list_id_check" value="${list._id}">
+            <button type="submit">Check list</button>
+        </form>
+
+        <form style="display:inline" action="delete-list" method="POST">
+            <input type="hidden" name="list_id" value="${list._id}">
+            <button type="submit">Delete list</button>
+        </form>
             `;
     });
 

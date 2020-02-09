@@ -1,6 +1,7 @@
 const list_model = require('../models/list-model');
 const list_views = require('../views/list-views');
 
+// ./.
 const get_lists = (req, res, next) => {
     const user = req.user;
     user.populate('lists')
@@ -34,6 +35,8 @@ const post_delete_list = (req, res, next) => {
     });
 };
 
+//get list  List text:1
+
 const get_list = (req, res, next) => {
     const list_id = req.params.id;
     list_model.findOne({
@@ -61,8 +64,21 @@ const post_list = (req, res, next) => {
     });
 };
 
+//new
+//app.post('/check-list', (req, res, next) => {
+const post_check_list = (req, res, next) => {
+    const user = req.user;
+    const list_id_to_check= req.body.list_id_check; 
+    id=list_id_to_check; 
+    console.log('list to check', list_id_to_check);
+    
+    
+    res.redirect('/list/'+ id); 
+    };
+
 
 module.exports.get_lists = get_lists;
 module.exports.get_list = get_list;
 module.exports.post_list = post_list;
-module.exports.post_delete_list = post_delete_list;
+module.exports.post_delete_list = post_delete_list; 
+module.exports.post_check_list = post_check_list;

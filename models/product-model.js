@@ -8,6 +8,15 @@ const product_schema = new Schema({
         required: true
     
              },
+    amount: {
+        type: Number,
+        required: true  
+     },
+
+    picture: {
+        type: String,
+        //required: true  
+    },
          
 });
 
