@@ -1,7 +1,11 @@
 const lists_view = ((data) => {
     let html = `
     <html>
+    <head>
+    <link rel="stylesheet" href="/css/style.css">
+    </head> 
     <body>
+    
         <h1> SHOPPING LIST application </h1>
         <br>
         <h2> Welcome  ${data.user_name}! <h2>

@@ -1,0 +1,47 @@
+#first{
+    border: solid 1px; 
+    border-color:blue;
+    background-color: rgb(172, 243, 243);
+}
+
+.auth-views{
+    border: solid 1px; 
+    border-color:blues;
+    background-color: rgb(172, 243, 243);
+    block-size: 200px, 200px;
+    
+    text-align: center;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.button1 {
+
+    /*background-color: #4CAF50; /* Green */
+    border: none;
+    /*color: white;*/
+    width: 200px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+.button1:hover { 
+    background-color: rgb(12, 99, 80); /* Green */
+    color: white;
+  }
+.input1 {
+
+
+    /*background-color: #4CAF50; /* Green */
+    border: none;
+    /*color: white;*/
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}

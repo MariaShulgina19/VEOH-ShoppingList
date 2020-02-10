@@ -1,6 +1,9 @@
 const products_view = ((data) => {
     let html = `
     <html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
     <body>
         <h1> SHOPPING LIST application </h1>
          <h2> ${data.user_name}, here is list of ${data.list_text} for you! <h2>
@@ -15,19 +18,24 @@ const products_view = ((data) => {
 
 
     data.products.forEach((product) => { //<img src="${product.picture}"  width="100px" heigth="100px" >
+    //<p>   Amount: ${product.amount} psc.   </p>
         html += `<br>
         <div> 
-        <p> 
-            <h2> ${product.text} <br> </h2>
-            <img src="${product.picture}"  width="100px" heigth="100px" >
         
-         </p>
-        <p>   Amount: ${product.amount} psc.   </p>
+            <h2 > ${product.text} <br> </h2>
+        </div>
+
+        <div>
+            <img src="${product.picture}"  width="100px" heigth="100px " >
+        </div>
+
+        <div> 
+              <p>   Amount:<input type="number" name="product" value="${product.amount}"> psc.   </p>
         </div>
         `
         
          html += `
-        <form action="delete-product" method="POST">
+        <form style="display:inline" action="delete-product" method="POST">
         <input type="hidden" name="product_id" value="${product._id}">
         <input type="hidden" name="list_id_to_delete_product" value="${data.list_id}">
         <button type="submit">Delete product</button>
@@ -38,8 +46,8 @@ const products_view = ((data) => {
     html += `
         <h2> Add new product:  <h2>
         <form action="add-product" method="POST">
-            product name:<input type="text" name="product">
-            amount: <input type="number" name="product_amount">
+            product name:<input type="text" name="product" value="new name">
+            amount: <input type="number" name="product_amount" value="1">
             
             image:<input type="text" name="image_url" value="https://cdn.pixabay.com/photo/2020/02/05/15/19/zoo-4821484_960_720.jpg">
             
