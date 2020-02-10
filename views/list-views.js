@@ -44,7 +44,7 @@ const lists_view = ((data) => {
                 <br>
             </form>
             <br>
-            </div>
+        </div>
             
 
             `;

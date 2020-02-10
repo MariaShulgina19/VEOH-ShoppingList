@@ -137,6 +137,7 @@
     font-family: Tahoma, Geneva, sans-serif;
     padding-left: 20px;
     border-radius: 12px;
+    /* position: fixed; */
    
 }
 .list-views:hover { 
@@ -159,4 +160,14 @@
 .list-views2:hover { 
     background-color: rgb(12, 99, 80); /* Green */
     color: white;
+  }
+  .image1{
+
+    width:150px;
+    display: inline-block;
+ 
+    border-radius: 12px;
+    border: solid 1px; 
+    border-color: rgb(12, 99, 80);
+    vertical-align: bottom;
   }
