@@ -10,12 +10,12 @@ const login_view = () => {
             <h1> SHOPPING LIST application </h1>
             <br>
                 <form action="/login" method="POST">
-                    <input class=input1 type="text" name="user_name">
+                    <input class=input1 type="text" name="user_name" >
                     <button class=button1 type="submit">Come in</button>
                 </form>
 
                 <form action="/register" method="POST">
-                      <input class=input1 type="text" name="user_name">
+                      <input class=input1 type="text" name="user_name" >
                       <button class=button1 type="submit">Register me</button>
                 </form>
         </div>

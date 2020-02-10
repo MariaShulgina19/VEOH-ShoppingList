@@ -5,42 +5,54 @@ const lists_view = ((data) => {
     <link rel="stylesheet" href="/css/style.css">
     </head> 
     <body>
-    
-        <h1> SHOPPING LIST application </h1>
-        <br>
-        <h2> Welcome  ${data.user_name}! <h2>
-        <br>
-        <form action="/logout" method="POST">
-            <button type="submit">Log out</button>
-        </form>
-        <h2> All lists: <h2>
+         <div class="list-views" >
+
+            <h1> SHOPPING LIST application </h1>
+            
+            <h2> Welcome  ${data.user_name}! <h2>
+           
+           
+            <form  style="display:inline" action="/add-list" method="POST">
+                <input class=input2 type="text" name="list" value="new list name">
+                <button class=button2 type="submit">Add new list</button>
+            </form>
+            <form  style="display:inline" action="/logout" method="POST">
+                <button class=button2 type="submit">Log out</button>
+            </form>
+            <h2> All lists: <h2>
+        </div>
         `;
 
-
+        
     data.lists.forEach((list) => {
-        html += ` <div> 
-        <p> 
+        html += `
+        
+        <div class="list-views2" > 
+        
         <h3> ${list.text} <br> </h3>
         
         
         
-        <form style="display:inline" action="check-list" method="POST">
-            <input type="hidden" name="list_id_check" value="${list._id}">
-            <button type="submit">Check list</button>
-        </form>
+            <form  style="display:inline" action="check-list" method="POST">
+                <input type="hidden" name="list_id_check" value="${list._id}">
+                <button class=button3 type="submit">Check list</button>
+            </form>
+            
+            <form style="display:inline" action="delete-list" method="POST">
+                <input type="hidden" name="list_id" value="${list._id}">
+                <button  class=button3 type="submit">Delete list</button>
+                <br>
+            </form>
+            <br>
+            </div>
+            
 
-        <form style="display:inline" action="delete-list" method="POST">
-            <input type="hidden" name="list_id" value="${list._id}">
-            <button type="submit">Delete list</button>
-        </form>
             `;
-    });
-
-    html += `
-        <form action="/add-list" method="POST">
-            <input type="text" name="list">
-            <button type="submit">Add new list</button>
-        </form>
+        });
+    
+        html += `
+       
+        
     </html>
     </body>
     `;
