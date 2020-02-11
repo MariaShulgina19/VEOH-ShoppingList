@@ -11,7 +11,7 @@ const login_view = () => {
             <br>
                 <form action="/login" method="POST">
                     <input class=input1 type="text" name="user_name" >
-                    <button class=button1 type="submit">Come in</button>
+                    <button class=button1 type="submit">Log in</button>
                 </form>
 
                 <form action="/register" method="POST">
