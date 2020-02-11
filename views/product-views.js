@@ -17,17 +17,17 @@ const products_view = ((data) => {
             <form style="display:inline" action="/logout" method="POST">
                 <button  class=button2 type="submit">Log out</button>
                 <br>
-            </form>
-            <p>product name:    amount:   image:<p>
+            </form>	
+             <p>product name: &nbsp;  amount: &nbsp;   image:<p>
 
              <form action="add-product" method="POST">
                 <input class=input2 type="text" name="product" value="new name">
-                <input class=input2 type="number" name="product_amount" value="1">
+                <input class=inputAmount type="number" name="product_amount" value="1">
                 
                 <input class=input2 type="text" name="image_url" value="https://cdn.pixabay.com/photo/2020/02/05/15/19/zoo-4821484_960_720.jpg">
                 
                 <input type="hidden" name="list_id_prod" value="${data.list_id}">  
-                <button class=button2 type="submit">Add new product</button>
+                <button class=button4 type="submit">Add new product</button>
             </form>
             </div>`;
 
@@ -42,7 +42,7 @@ const products_view = ((data) => {
         
 
        
-            Amount:<input class=input2 type="number" name="product" value="${product.amount}"> psc/kg.   
+            Amount:<input class=inputAmount type="number" name="product" value="${product.amount}"> psc/kg.   
         
                 <form style="display:inline" action="delete-product" method="POST">
                     <input type="hidden" name="product_id" value="${product._id}">

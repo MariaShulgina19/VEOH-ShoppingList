@@ -13,8 +13,8 @@ const lists_view = ((data) => {
            
            
             <form  style="display:inline" action="/add-list" method="POST">
-                <input class=input2 type="text" name="list" value="new list name">
-                <button class=button2 type="submit">Add new list</button>
+                <input class=input2 type="text" name="list" value="add new list name">
+                <button class=button4 type="submit">Add new list</button>
             </form>
             <form  style="display:inline" action="/logout" method="POST">
                 <button class=button2 type="submit">Log out</button>
@@ -35,7 +35,7 @@ const lists_view = ((data) => {
         
             <form  style="display:inline" action="check-list" method="POST">
                 <input type="hidden" name="list_id_check" value="${list._id}">
-                <button class=button3 type="submit">Check list</button>
+                <button class=button5 type="submit">Check list</button>
             </form>
             
             <form style="display:inline" action="delete-list" method="POST">

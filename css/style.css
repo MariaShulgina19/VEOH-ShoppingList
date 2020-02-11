@@ -71,6 +71,42 @@
     border-color: rgb(12, 99, 80);
 }
 
+.button4 {
+
+    /*background-color: #4CAF50; /* Green */
+    border: none;
+    /*color: white;*/
+    width: 200px;
+    padding: 15px 32px;
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    border: solid 1px; 
+    background-color:rgb(126, 28, 44);
+    color: white;
+    border-color: rgb(12, 99, 80);
+}
+.button5 {
+
+    /*background-color: #4CAF50; /* Green */
+    border: none;
+    /*color: white;*/
+    width: 200px;
+    padding: 15px 32px;
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    border: solid 1px; 
+    background-color: rgb(34, 77, 77);
+    color: white;
+    border-color: rgb(12, 99, 80);
+}
 
 .button1:hover { 
     background-color: rgb(12, 99, 80); /* Green */
@@ -84,6 +120,16 @@
   .button3:hover{
     background-color: rgb(34, 77, 77);
     color: white;
+  }
+
+  .button4:hover{
+    background-color: rgb(34, 77, 77);
+    color: white;
+  }
+
+  .button5:hover { 
+    background-color:white; /* Green */
+    color:rgb(12, 99, 80);
   }
 .input1 {
 
@@ -124,8 +170,28 @@
     border: solid 1px; 
     border-color: rgb(12, 99, 80);
 }
+.inputAmount {
+
+
+    /*background-color: #4CAF50; /* Green */
+    border: none;
+    /*color: white;*/
+    width: 100px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    border: solid 1px; 
+    border-color: rgb(12, 99, 80);
+}
 .input2:hover {
-    border-color:white; /* Green */
+    border-color:white; /* White */
+    
+}
+.inputAmount:hover {
+    border-color:white; /* White */
     
 }
 
@@ -148,6 +214,7 @@
 
 .list-views2{
     color: rgb(34, 77, 77);
+    /* color: rgb(126, 28, 44); */
     border: solid 1px; 
     border-color:blues;
     background-color:rgb(219, 250, 250);
